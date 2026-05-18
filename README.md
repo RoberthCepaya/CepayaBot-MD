@@ -64,3 +64,59 @@ Cepaya-Bot implementa un sistema jerárquico de control de mensajes para evitar 
 [ ¿Existe coincidencia en subcarpetas de comandos? ]
          ├── Sí ➔ Ejecuta Plugin Modular (Cierra ciclo)
          └── No ➔ Transfiere control al Pipeline de IA (Procesando con IA)
+
+
+## **🗂️ Estructura del Proyecto**
+
+El ecosistema está organizado de manera modular por subcarpetas, lo que facilita una super-limpieza de argumentos, la edición rápida y la creación de nuevos comandos o complementos de IA sin alterar el núcleo principal.
+
+```text
+📂 CepayaBot-MD/
+├── 📁 src/
+│   ├── 📁 bases/          # Archivos esenciales y cargadores del sistema
+│   ├── 📁 database/       # Gestión de datos, usuarios y configuraciones de grupos
+│   └── 📁 utils/          # Herramientas multimedia y funciones secundarias (e.g. bot_image.jpg)
+├── 📁 plugins/            # Módulos automáticos e independientes del bot
+│   ├── 📄 IA_responses.js # Procesador inteligente de intenciones sin triggers fijos
+│   ├── 📄 group_info.js   # Comandos y gestión de administración de grupos
+│   ├── 📄 sticker_gen.js  # Creador de stickers (estilo brat y multimedia)
+│   └── 📄 uptime.js       # Monitoreo de estado y actividad en el servidor
+├── 📄 config.js           # Archivo global de configuraciones (tokens, prefijos, número)
+├── 📄 package.json        # Dependencias principales del ecosistema (Baileys, etc.)
+└── 📄 index.js            # Punto de arranque y conexión con el servidor
+
+
+## **📥 Instalación y Despliegue**
+
+Sigue los comandos detallados según el entorno donde vayas a desplegar el ecosistema de **CepayaBot-MD**.
+
+### **📱 Despliegue en Termux (Android)**
+Ideal para correr el bot directamente desde tu dispositivo móvil. Abre Termux y ejecuta los siguientes comandos uno por uno:
+
+```bash
+# 1. Actualizar el entorno de Termux
+pkg update -y && pkg upgrade -y
+
+# 2. Instalar herramientas básicas y Node.js
+pkg install git nodejs ffmpeg imagemagick -y
+
+# 3. Clonar el repositorio oficial
+git clone [https://github.com/RoberthCepaya/CepayaBot-MD.git](https://github.com/RoberthCepaya/CepayaBot-MD.git)
+cd CepayaBot-MD
+
+# 4. Instalar las dependencias del sistema
+npm install
+
+# 5. Iniciar el bot y escanear el código QR
+npm start
+
+
+---
+
+## **⚠️ Descargo de Responsabilidad (Disclaimer)**
+
+Este proyecto ha sido desarrollado exclusivamente con **fines educativos, de investigación y desarrollo de software**. 
+
+- **Sin Relación Oficial:** Este repositorio y su creador no tienen ningún tipo de relación, afiliación, patrocinio ni autorización oficial por parte de **WhatsApp Inc.**, Meta Platforms Inc., ni ninguna de sus subsidiarias o empresas relacionadas. El nombre "WhatsApp" es una marca registrada de sus respectivos dueños.
+- **Uso Responsable:** El uso de herramientas de automatización de terceros puede infringir los Términos de Servicio de la aplicación oficial. El desarrollador de este ecosistema **no se hace responsable** del mal uso que se le dé a este software, incluyendo suspensiones de cuentas, bloqueos de números de teléfono, pérdida de datos o sanciones aplicadas por la plataforma.
+- **Riesgo del Usuario:** La configuración, despliegue y ejecución de este bot corren bajo la absoluta responsabilidad y riesgo del usuario final.
