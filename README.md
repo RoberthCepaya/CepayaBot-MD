@@ -192,7 +192,7 @@ nano .env  # Configura tus API keys aquí
 npm start
 # O con PM2: pm2 start index.js --name "cepaya-bot"
 ```
- ##📝 Ejemplos de Interacción Nativos
+ ##  📝 Ejemplos de Interacción Nativos
 Comandos Generales y Media
 
 ```text
