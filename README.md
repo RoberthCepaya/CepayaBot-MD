@@ -250,7 +250,7 @@ Este proyecto ha sido desarrollado exclusivamente con **fines educativos, de inv
   <a href="https://facebook.com/roberthccepaya" target="_blank">
     <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook"/>
   </a>&nbsp;&nbsp;
-  <a href="https://github.com/RoberthCepaya/CepayaBot-MD/issues" target="_blank">
+  <a href="https://github.com/RoberthCepaya/CepayaBot-MD" target="_blank">
     <img src="https://img.shields.io/badge/GitHub_Issues-181717?style=for-the-badge&logo=github&logoColor=white" alt="Issues"/>
   </a>
 </p>
